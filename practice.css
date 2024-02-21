@@ -1,0 +1,33 @@
+.Header, .Nav, .Main, .Sideber, .Advertise, .Footer{
+    border: 2px solid red;
+    background-color: bisque;
+    padding: 5px;
+}
+.Header{
+    grid-area: Header;
+}
+.Nav{
+    grid-area: Nav;
+}
+.Main{
+    grid-area: Main;
+}
+.Sideber{
+    grid-area: Siderber;
+}
+.Advertise{
+    grid-area: Advertise;
+}
+.Footer{
+    grid-area: Footer;
+}
+.Container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "Header Header Header Header"
+    "Nav Main Main Sideber"
+    "Nav Main Main Advertise"
+    "Footer Footer Footer Footer"
+    ;
+}

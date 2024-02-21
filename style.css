@@ -1,0 +1,93 @@
+.Flex-Container{
+    display: flex;
+    gap: 20px;
+}
+.Box{
+    background-color: slateblue;
+    padding: 20px;
+    margin-top: 10px;
+}
+.Flex-Container-02{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.Item{
+    width: 400px;
+    height: 100px;
+    background-color: aquamarine;
+}
+@media screen and (max-Width: 776px) {
+    .Flex-Container{
+        flex-direction: column;
+    }
+    .Item{
+        width: 100%;
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+.Row{
+    height: 400px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.Row > div{
+    flex: 1; /* (flex: 1;) এটা ব্যাবহার করা হয় ফ্লেক্স এর প্রতিটা আইটেম কতটুকু জায়গা নিবে তার জন্য। */
+}
+.Vartical-College img{
+    height: calc( (100% - 5px)/2 );
+}
+.Squre-College{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+/* Responsive Media Query */
+
+@media screen and (max-Width:776px) {
+    .Row{
+        flex-direction: column;
+        height: auto;
+    }
+    .Squre-College{
+        grid-template-columns: 1fr;
+    }
+}
+/* Medium Devices */
+@media screen and (min-width:776px) and (max-width:992px) {
+    .Row{
+        flex-direction: column;
+        height: auto;
+    }
+}
+.Grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px) 50px 50px;
+    gap: 10px;
+}
+.Grid-container :nth-child(6),
+.Grid-container :nth-child(7),
+.Grid-container :nth-child(9),
+.Grid-container :nth-child(10){
+    background-color: tomato;
+}
+.Box-Grid{
+    background-color: lightgray;
+}
+#Box-1{
+    grid-row: span 5;
+}
+#Box-11{
+    grid-column: span 3;
+}
+#Box-12{
+    grid-column: span 3;
+}
